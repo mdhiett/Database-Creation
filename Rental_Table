@@ -1,0 +1,19 @@
+-- Table: public.Rental
+
+-- DROP TABLE IF EXISTS public."Rental";
+
+CREATE TABLE IF NOT EXISTS public."Rental"
+(
+    "Rental_ID" bigint NOT NULL,
+    "Copy_ID" bigint NOT NULL,
+    "Cust_ID" bigint NOT NULL,
+    "Rental_Date" date NOT NULL,
+    "Return_Date" date NOT NULL,
+    "Late_Fees" money DEFAULT '$0.00'::money,
+    CONSTRAINT "Rental_pkey" PRIMARY KEY ("Rental_ID")
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public."Rental"
+    OWNER to postgres;
