@@ -1,0 +1,22 @@
+-- Table: public.Movie
+
+-- DROP TABLE IF EXISTS public."Movie";
+
+CREATE TABLE IF NOT EXISTS public."Movie"
+(
+    "Movie_ID" bigint NOT NULL,
+    "Title" text COLLATE pg_catalog."default" NOT NULL,
+    "Genre" text COLLATE pg_catalog."default" NOT NULL,
+    "Running_Length" time without time zone,
+    "Rating" text COLLATE pg_catalog."default",
+    "Director" text COLLATE pg_catalog."default",
+    "Year_Released" date,
+    "Distributor_ID" bigint NOT NULL,
+    "Cost" money NOT NULL,
+    CONSTRAINT "Movie_pkey" PRIMARY KEY ("Movie_ID")
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public."Movie"
+    OWNER to postgres;
