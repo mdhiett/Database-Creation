@@ -1,0 +1,18 @@
+-- Table: public.Copy_Format
+
+-- DROP TABLE IF EXISTS public."Copy_Format";
+
+CREATE TABLE IF NOT EXISTS public."Copy_Format"
+(
+    "Copy_ID" bigint NOT NULL,
+    "Movie_ID" bigint,
+    "Distributor_ID" bigint,
+    "Format" text COLLATE pg_catalog."default",
+    "Purchase_Price" money,
+    CONSTRAINT "Copy (Both DVD and Video)_pkey" PRIMARY KEY ("Copy_ID")
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public."Copy_Format"
+    OWNER to postgres;
