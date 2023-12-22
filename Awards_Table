@@ -1,0 +1,18 @@
+-- Table: public.Awards
+
+-- DROP TABLE IF EXISTS public."Awards";
+
+CREATE TABLE IF NOT EXISTS public."Awards"
+(
+    "Award_ID" real NOT NULL,
+    "Movie_ID" real,
+    "Type_of_Award" text COLLATE pg_catalog."default",
+    "Year" date,
+    "Movie" text COLLATE pg_catalog."default",
+    CONSTRAINT "Awards_pkey" PRIMARY KEY ("Award_ID")
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public."Awards"
+    OWNER to postgres;
