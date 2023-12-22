@@ -1,0 +1,15 @@
+-- Table: public.Distributor
+
+-- DROP TABLE IF EXISTS public."Distributor";
+
+CREATE TABLE IF NOT EXISTS public."Distributor"
+(
+    "Distributor_ID" bigint NOT NULL,
+    "Name" text COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT "Distributor_pkey" PRIMARY KEY ("Distributor_ID")
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public."Distributor"
+    OWNER to postgres;
